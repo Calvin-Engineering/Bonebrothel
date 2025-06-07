@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonebrothel</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Slide-Out Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#shows">Shows</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-socials">
+            <a href="https://www.instagram.com/bonebrothelpdx/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/Bone-Brothel/61554059877619/" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+
+    <!-- Centered Desktop Navbar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#shows">Shows</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/bonebrothelpdx/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/Bone-Brothel/61554059877619/" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </nav>
+
+    <!-- Header with overlay logo -->
+    <header class="image-header">
+        <div class="overlay">
+            <img src="/Bonebrothel/img/BB_logo_white.png" alt="Bonebrothel Logo" class="header-logo" />
+        </div>
+    </header>
+
+    <!-- Sections -->
+    <section id="about" class="container">
+        <h2>About</h2>
+        <div class="divider"></div>
+        <div class="card">
+            <p>Bonebrothel is a rock/grunge/metal band based in Portland, OR. Blending haunting melodies, guttural riffs, and ferocious vocals, the band draws influence from icons like Soundgarden, Black Sabbath, Nirvana, and The Pretty Reckless. Their music fuses heavy energy with raw emotion, creating a sonic experience that’s both visceral and hypnotic. Members include Alexis on bass, Shannon on drums, Gea on vocals, and Calvin on lead guitar.</p>
+        </div>
+    </section>
+
+    <section id="music" class="container">
+        <h2>Music</h2>
+        <div class="divider"></div>
+        <div class="card">
+            <p>Check us out on <a href="https://www.instagram.com/bonebrothelpdx/" target="_blank">Instagram</a> and <a href="https://www.facebook.com/people/Bone-Brothel/61554059877619/" target="_blank">Facebook</a> for music releases and behind-the-scenes content.</p>
+        </div>
+    </section>
+
+    <section id="video" class="container">
+        <h2>Video</h2>
+        <div class="divider"></div>
+        <div class="card">
+            <p>Videos coming soon — follow us on our socials for the latest updates and show recaps!</p>
+        </div>
+    </section>
+
+    <section id="photos" class="container">
+        <h2>Photos</h2>
+        <div class="divider"></div>
+        <div class="photo-grid"></div>
+    </section>
+
+    <section id="press" class="container">
+        <h2>Press</h2>
+        <div class="divider"></div>
+        <div class="card">
+            <p>“Bonebrothel delivers a chillingly powerful performance — a rising force in Portland's rock scene.” — Local Music Press</p>
+        </div>
+    </section>
+
+    <section id="shows" class="container">
+        <h2>Shows</h2>
+        <div class="divider"></div>
+        <div class="card">
+            <ul>
+                <li><strong>June 21:</strong> Shanghai Tunnel Bar, Portland OR</li>
+                <li><strong>August 1-2:</strong> Femme Fatale Fest</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <div class="divider"></div>
+        <div class="card">
+            <p>For booking and inquiries, please contact: <a href="mailto:bonebrothelpdx@gmail.com">bonebrothelpdx@gmail.com</a></p>
+        </div>
+    </section>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('open');
+        }
+
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
