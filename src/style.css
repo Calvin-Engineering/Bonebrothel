@@ -42,7 +42,7 @@ html {
     }
 
     .nav-links a:hover {
-      color: #f13659;
+      color: #a3cb38;
     }
 
     .social-icons {
@@ -57,14 +57,14 @@ html {
     }
 
     .social-icons a:hover {
-      color: #f13659;
+      color: #a3cb38;
     }
 
     .image-header {
       position: relative;
       width: 100%;
       height: 100vh;
-      background: url('/Bonebrothel/img/2025-2-28\ bone\ brothel-00003.jpg') no-repeat center center/cover;
+      background: url('/img/MM-show/2025-2-28\ bone\ brothel-00013.jpg') no-repeat center center/cover;
     }
 
     .overlay {
@@ -110,7 +110,7 @@ html {
       font-size: 2.5rem;
       text-align: center;
       margin-bottom: 1rem;
-      color: #f13659;
+      color: #a3cb38;
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -119,7 +119,7 @@ html {
     .divider {
       height: 4px;
       width: 60px;
-      background: #f13659;
+      background: #a3cb38;
       margin: 1rem auto 2rem;
     }
 
@@ -212,10 +212,30 @@ html {
         display: block;
       }
       .image-header {
-        background-image: url('/Bonebrothel/img/Bb_MD03_Sticker\ copy.jpg');
+        background-image: url('/img/Bb_MD03_Sticker\ copy.jpg');
         height: 100vh;
       }
       .overlay .header-logo {
         display: none;
       }
     }
+
+    .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-top: 1rem;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.03);
+}
