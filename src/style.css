@@ -212,9 +212,13 @@ html {
         display: block;
       }
       .image-header {
-        background-image: url('/Bonebrothel/img/Bb_MD03_Sticker\ copy.jpg');
-        height: 100vh;
-      }
+  background-image: url('/Bonebrothel/img/BB_logo_green.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
       .overlay .header-logo {
         display: none;
       }
